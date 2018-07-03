@@ -2,6 +2,8 @@
 
 GOV.UK Design System Nunjucks macro snippets for popular code editors. For use by UK government designers. 
 
+![An animation of the code snippets in action](https://github.com/daviddotto/govuk-design-system-snippets/blob/master/ezgif-2-c2cf26f887.gif "Snippets in action")
+
 ## Installation
 
 To install these snippets to Visual Studio Code simply move the file `govuk-design-system.code-snippets` into `~/Library/Application Support/Code/User/snippets/` or create a new global snippets file and copy the contents of `govuk-design-system.code-snippets` into it and save.
