@@ -1,4 +1,4 @@
-# GOV.UK Design System Snippets - v0.1
+# GOV.UK Design System Snippets
 
 GOV.UK Design System Nunjucks macro snippets for popular code editors. For use by UK government designers. 
 
@@ -55,4 +55,4 @@ Visual Studio Code has the added benefit of allowing users to choose from a list
 
 ## Roadmap
 
-We're currently working on translating these snippets to Atom and Sublime Text. Any and all feedback would be appreciated.
+We're currently working on porting these snippets to Sublime Text. Any and all feedback would be appreciated.
