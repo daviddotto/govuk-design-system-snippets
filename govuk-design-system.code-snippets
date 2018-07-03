@@ -33,10 +33,10 @@
 	},
 
 	"Two-thirds / one-third layout": {
-		"prefix": "gov-layout-twothirds",
+		"prefix": "gov-layout-twothirds-onethird",
 		"scope": "html,nunjucks",
         "body": [
-          "<div class=\"govuk-grid-row\">",
+          "<div class='govuk-grid-row'>",
 					"\t<div class=\"govuk-grid-column-two-thirds\">",
 					"\t\t<h1 class=\"govuk-heading-xl\">Two-thirds column</h1>",
 					"\t\t<p class=\"govuk-body\">This is a paragraph inside a two-thirds wide column</p>",
@@ -62,7 +62,7 @@
         "description": "Grid row - GOV.UK Design System"
 	},
 
-	"Coumn": {
+	"Column": {
 		"prefix": "gov-layout-column",
 		"scope": "html,nunjucks",
         "body": [
@@ -84,7 +84,7 @@
         "description": "Link - GOV.UK Design System"
 	},
 
-	"Header Text": {
+	"Header text": {
 		"prefix": "gov-typo-header-text",
 		"scope": "html,nunjucks",
         "body": [
@@ -93,13 +93,13 @@
         "description": "Header - GOV.UK Design System"
 	},
 
-	"Paragraph Text": {
+	"Paragraph text": {
 		"prefix": "gov-typo-paragraph-text",
 		"scope": "html,nunjucks",
         "body": [
           "<p class=\"${1|govuk-body,govuk-body-l,govuk-body-s|}\">$2</p>"
         ],
-        "description": "Header - GOV.UK Design System"
+        "description": "Paragraph text - GOV.UK Design System"
 	},
 	
 	"List": {
@@ -111,6 +111,17 @@
 					"</ul>",
         ],
         "description": "List - GOV.UK Design System"
+	},
+
+	"Numbered list": {
+		"prefix": "gov-typo-number-list",
+		"scope": "html,nunjucks",
+        "body": [
+					"<ol class=\"govuk-list govuk-list--number\">",
+					"\t<li>$1</li>",
+					"</ol>",
+        ],
+        "description": "Numbered list - GOV.UK Design System"
 	},
 
 	"Section break": {
@@ -129,8 +140,8 @@
 		"scope": "html,nunjucks",
         "body": [
 					"{{ govukBackLink({",
-					"\ttext: \"${1:Back}\",",
-					"\thref: \"${2:javascript:history.back()}\"",
+					"\ttext: '${1:Back}',",
+					"\thref: '${2:javascript:history.back()}'",
 					"}) }}"
         ],
         "description": "Back link - GOV.UK Design System"
@@ -140,9 +151,9 @@
 		"prefix": "gov-warning-text",
 		"scope": "html,nunjucks",
         "body": [
-					"{{ govukBackLink({",
-					"\ttext: \"${1:Back}\",",
-					"\thref: \"${2:javascript:history.back()}\"",
+					"{{ govukWarningText({",
+					"\ttext: '$1',",
+					"\ticonFallbackText: '${2:Warning}'",
 					"}) }}"
         ],
         "description": "Warning text - GOV.UK Design System"
@@ -153,8 +164,8 @@
 		"scope": "html,nunjucks",
         "body": [
 					"{{ govukInsetText({",
-						"\ttext: \"$1\"",
-						"}) }}"
+					"\ttext: '$1'",
+					"}) }}"
         ],
         "description": "Inset text - GOV.UK Design System"
 	},
@@ -166,11 +177,11 @@
 					"{{ govukBreadcrumbs({",
 					"\titems: [",
 					"\t\t{",
-					"\t\t\ttext: \"${1:Home}\",",
-					"\t\t\thref: \"${2:#}\"",
+					"\t\t\ttext: '${1:Home}',",
+					"\t\t\thref: '${2:#}'",
 					"\t\t},",
 					"\t\t{",
-					"\t\t\ttext: \"${3:Page name}\"",
+					"\t\t\ttext: '${3:Page name}'",
 					"\t\t}",
 					"\t]",
 					"}) }}"
@@ -183,9 +194,9 @@
 		"scope": "html,nunjucks",
         "body": [				
 					"{{ govukButton({",
-					"\ttext: \"${1:Start}\",",
-					"\thref: \"${2:#}\",",
-					"\tclasses: \"${3| ,govuk-button--start|}\"",
+					"\ttext: '${1:Start}',",
+					"\thref: '${2:#}',",
+					"\tclasses: '${3| ,govuk-button--start|}'",
 					"}) }}"
         ],
         "description": "Link button - GOV.UK Design System"
@@ -193,15 +204,15 @@
 
 	// COMPONENTS - FORM ELEMENTS
 
-	"Form button": {
+	"Form submit button": {
 		"prefix": "gov-form-button",
 		"scope": "html,nunjucks",
         "body": [
 					"{{ govukButton({",
-						"\thtml: \"${2:Save and continue}\"",
-						"}) }}"
+					"\thtml: '${1:Save and continue}'",
+					"}) }}"
         ],
-        "description": "Breadcrumbs - GOV.UK Design System"
+        "description": "Form submit button - GOV.UK Design System"
 	},
 
 	"Text input": {
@@ -209,12 +220,12 @@
 		"scope": "html,nunjucks",
         "body": [
 					"{{ govukInput({",
-					"\tid: \"$1\",",
-					"\tname: \"$1\",",
-					"\tclasses: \"${3| ,govuk-input--width-20,govuk-input--width-10|}\",",
+					"\tid: '$1',",
+					"\tname: '$1',",
+					"\tclasses: '${3| ,govuk-input--width-20,govuk-input--width-10|}',",
 					"\tlabel: {",
-					"\t\ttext: \"${2:Label}\",",
-					"\t\tclasses: \"$3\"",
+					"\t\ttext: '${2:Label}',",
+					"\t\tclasses: '$3'",
 					"\t}",
 					"}) }}"
         ],
@@ -226,16 +237,16 @@
 		"scope": "html,nunjucks",
         "body": [
 					"{{ govukInput({",
-					"\tid: \"$1\",",
-					"\tname: \"$1\",",
-					"\tclasses: \"${4| ,govuk-input--width-20,govuk-input--width-10|}\",",
+					"\tid: '$1',",
+					"\tname: '$1',",
+					"\tclasses: '${4| ,govuk-input--width-20,govuk-input--width-10|}',",
 					"\tlabel: {",
-					"\t\ttext: \"${2:Label}\"",
-					"\t\tclasses: \"$4\"",
+					"\t\ttext: '${2:Label}'",
+					"\t\tclasses: '$4'",
 					"\t},",
 					"\thint: {",
-					"\t\ttext: \"${3:Hint Text}\",",
-					"\t\tclasses: \"$4\"",
+					"\t\ttext: '${3:Hint Text}',",
+					"\t\tclasses: '$4'",
 					"\t}",
 					"}) }}"
         ],
@@ -247,10 +258,10 @@
 		"scope": "html,nunjucks",
         "body": [
 					"{{ govukTextarea({",
-						"\tid: \"$1\",",
-						"\tname: \"$1\",",
+						"\tid: '$1',",
+						"\tname: '$1',",
 						"\tlabel: {",
-						"\t\ttext: \"${2:Label}\"",
+						"\t\ttext: '${2:Label}'",
 						"\t}",
 						"}) }}"
         ],
@@ -262,13 +273,13 @@
 		"scope": "html,nunjucks",
         "body": [
 					"{{ govukTextarea({",
-					"\tid: \"$1\",",
-					"\tname: \"$1\",",
+					"\tid: '$1',",
+					"\tname: '$1',",
 					"\tlabel: {",
-					"\t\ttext: \"${2:Label}\"",
+					"\t\ttext: '${2:Label}'",
 					"\t},",
 					"\thint: {",
-					"\t\ttext: \"${3:Hint Text}\"",
+					"\t\ttext: '${3:Hint Text}'",
 					"\t}",
 					"}) }}"
         ],
@@ -280,17 +291,42 @@
 		"scope": "html,nunjucks",
         "body": [
 					"{{ govukRadios({",
-					"\tidPrefix: \"$1\",",
-					"\tname: \"$1\",",
+					"\tidPrefix: '$1',",
+					"\tname: '$1',",
 					"\tfieldset: {",
 					"\t\tlegend: {",
-					"\t\t\ttext: \"${2:Legend text}\",",
+					"\t\t\ttext: '${2:Legend text}',",
 					"\t\t\tisPageHeading: true,",
-					"\t\t\tclasses: \"govuk-fieldset__legend--xl\"",
+					"\t\t\tclasses: 'govuk-fieldset__legend--xl'",
 					"\t\t}",
 					"\t},",
 					"\thint: {",
-					"\t\ttext: \"${3:Hint text}\"",
+					"\t\ttext: '${3:Hint text}'",
+					"\t},",
+					"\titems: [",
+					"\t${4:Use gov-form-radio-checkbox-option}",
+					"\t]",
+					"}) }}"
+        ],
+        "description": "Radio buttons - GOV.UK Design System"
+	},
+
+	"Checkboxes": {
+		"prefix": "gov-form-radio-buttons",
+		"scope": "html,nunjucks",
+        "body": [
+					"{{ govukCheckboxes({",
+					"\tidPrefix: '$1',",
+					"\tname: '$1',",
+					"\tfieldset: {",
+					"\t\tlegend: {",
+					"\t\t\ttext: '${2:Legend text}',",
+					"\t\t\tisPageHeading: true,",
+					"\t\t\tclasses: 'govuk-fieldset__legend--xl'",
+					"\t\t}",
+					"\t},",
+					"\thint: {",
+					"\t\ttext: '${3:Hint text}'",
 					"\t},",
 					"\titems: [",
 					"\t${4:gov-form-radio-checkbox-option}",
@@ -305,59 +341,34 @@
 		"scope": "html,nunjucks",
         "body": [
 					"{{ govukRadios({",
-					"\tclasses: \"govuk-radios--inline\",",
-					"\tidPrefix: \"$1\",",
-					"\tname: \"$1\",",
+					"\tclasses: 'govuk-radios--inline',",
+					"\tidPrefix: '$1',",
+					"\tname: '$1',",
 					"\tfieldset: {",
 					"\t\tlegend: {",
-					"\t\t\ttext: \"${2:Legend text}\",",
+					"\t\t\ttext: '${2:Legend text}',",
 					"\t\t\tisPageHeading: true,",
-					"\t\t\tclasses: \"govuk-fieldset__legend--xl\"",
+					"\t\t\tclasses: 'govuk-fieldset__legend--xl'",
 					"\t\t}",
 					"\t},",
 					"\thint: {",
-					"\t\ttext: \"${3:Hint text}\"",
+					"\t\ttext: '${3:Hint text}'",
 					"\t},",
 					"\titems: [",
-					"\t${4:gov-form-radio-checkbox-option}",
+					"\t${4:Use gov-form-radio-checkbox-option}",
 					"\t]",
 					"}) }}"
         ],
         "description": "Inline radio buttons - GOV.UK Design System"
 	},
 
-	"Checkboxes": {
-		"prefix": "gov-form-radio-buttons",
-		"scope": "html,nunjucks",
-        "body": [
-					"{{ govukCheckboxes({",
-					"\tidPrefix: \"$1\",",
-					"\tname: \"$1\",",
-					"\tfieldset: {",
-					"\t\tlegend: {",
-					"\t\t\ttext: \"${2:Legend text}\",",
-					"\t\t\tisPageHeading: true,",
-					"\t\t\tclasses: \"govuk-fieldset__legend--xl\"",
-					"\t\t}",
-					"\t},",
-					"\thint: {",
-					"\t\ttext: \"${3:Hint text}\"",
-					"\t},",
-					"\titems: [",
-					"\t${4:gov-form-radio-checkbox-option}",
-					"\t]",
-					"}) }}"
-        ],
-        "description": "Radio buttons - GOV.UK Design System"
-	},
-
 	"Radio or checkbox option": {
-		"prefix": "gov-form-radio-checkbox-option",
+		"prefix": "gov-form-option",
 		"scope": "html,nunjucks",
         "body": [
 					"{",
-					"\tvalue: \"$1\",",
-					"\ttext: \"$2\"",
+					"\tvalue: '$1',",
+					"\ttext: '$2'",
 					"}"
         ],
         "description": "Radio or checkbox option - GOV.UK Design System"
@@ -368,27 +379,27 @@
 		"scope": "html,nunjucks",
         "body": [
 					"{{ govukDateInput({",
-					"\tid: \"$1\",",
-					"\tname: \"$1\",",
+					"\tid: '$1',",
+					"\tname: '$1',",
 					"\tfieldset: {",
 					"\t\tlegend: {",
-					"\t\t\ttext: \"${2:Legend text}\",",
+					"\t\t\ttext: '${2:Legend text}',",
 					"\t\t\tisPageHeading: true,",
-					"\t\t\tclasses: \"govuk-fieldset__legend--xl\"",
+					"\t\t\tclasses: 'govuk-fieldset__legend--xl'",
 					"\t\t}",
 					"\t},",
 					"\thint: {",
-					"\t\ttext: \"For example, 31 3 1980\"",
+					"\t\ttext: '${3:Hint text}'",
 					"\t},",
 					"\titems: [",
 					"\t\t{",
-					"\t\t\tname: \"day\"",
+					"\t\t\tname: 'day'",
 					"\t\t},",
 					"\t\t{",
-					"\t\t\tname: \"month\"",
+					"\t\t\tname: 'month'",
 					"\t\t},",
 					"\t\t{",
-					"\t\t\tname: \"year\"",
+					"\t\t\tname: 'year'",
 					"\t\t}",
 					"\t]",
 					"}) }}"
@@ -401,10 +412,10 @@
 		"scope": "html,nunjucks",
         "body": [
 					"{{ govukFileUpload({",
-						"\tid: \"$1\",",
-						"\tname: \"$1\",",
+						"\tid: '$1',",
+						"\tname: '$1',",
 						"\tlabel: {",
-						"\t\ttext: \"${2:Upload a file}\"",
+						"\t\ttext: '${2:Upload a file}'",
 						"\t}",
 						"}) }}"
         ],
