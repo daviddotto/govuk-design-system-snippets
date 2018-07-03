@@ -6,7 +6,10 @@ GOV.UK Design System Nunjucks macro snippets for popular code editors. For use b
 
 ## Installation
 
-To install these snippets to Visual Studio Code simply move the file `govuk-design-system.code-snippets` into `~/Library/Application Support/Code/User/snippets/` or create a new global snippets file and copy the contents of `govuk-design-system.code-snippets` into it and save.
+Installation will differ based on your operating system and text editor of choice. These snippets are designed to be addded to your existing HTML snippets, be careful not to overwrite your existing snippets.
+
+* [Snippets in Atom](https://atom.io/packages/snippets)
+* [Snippets in Visual Studio Code](https://code.visualstudio.com/docs/editor/userdefinedsnippets)
 
 ## Usage
 
@@ -17,6 +20,8 @@ To install these snippets to Visual Studio Code simply move the file `govuk-desi
 5. Your cursor will be moved to the first insertion point in the snippet, type in your content.
 6. Press \[tab] to move to the next insertion point. Repeat.
 7. Press \[tab] to finalise and move to the end of the snippet.
+
+Visual Studio Code has the added benefit of allowing users to choose from a list of options at some insertion points, simply press \[down] to choose from the available options and then \[return] to confirm.
 
 ## Available snippets
 
