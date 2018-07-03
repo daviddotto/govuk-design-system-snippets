@@ -1,0 +1,395 @@
+# 
+#
+# Add these snippets toy your existing '.text.html.basic' snippets.
+#
+# You can find instructions for installing snippets here: https://atom.io/packages/snippets
+#
+
+# COMMON LAYOUTS
+
+'.text.html.basic':
+  
+  # GOV.UK Design System snippets for Atom
+
+  # COMMON LAYOUTS
+
+  'Two-thirds layout':
+      'leftLabel' : 'GOV.UK'
+      'description': 'Two-thirds layout - GOV.UK Design System'
+      'descriptionMoreURL': 'https://design-system.service.gov.uk/styles/layout/#two-thirds'
+      'prefix': 'gov-layout-twothirds'
+      'body': """
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <h1 class="govuk-heading-xl">Two-thirds column</h1>
+          <p class="govuk-body">This is a paragraph inside a two-thirds wide column</p>
+        </div>
+      </div>
+      """
+  'Two-thirds / one-third layout':
+      'leftLabel' : 'GOV.UK'
+      'description': 'Two-thirds / one-third layout - GOV.UK Design System'
+      'descriptionMoreURL': 'https://design-system.service.gov.uk/styles/layout/#two-thirds-one-third'
+      'prefix': 'gov-layout-twothirds-onethird'
+      'body': """
+      <div class='govuk-grid-row'>
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-xl">Two-thirds column</h1>
+            <p class="govuk-body">This is a paragraph inside a two-thirds wide column</p>
+        </div>
+
+        <div class="govuk-grid-column-one-thirds">
+            <h1 class="govuk-heading-xl">One-thirds column</h1>
+            <p class="govuk-body">This is a paragraph inside a one-thirds wide column</p>
+        </div>
+      </div>
+      """
+  'Grid row':
+      'leftLabel' : 'GOV.UK'
+      'description': 'Grid row - GOV.UK Design System'
+      'descriptionMoreURL': 'https://design-system.service.gov.uk/styles/layout'
+      'prefix': 'gov-layout-grid-row'
+      'body': """
+      <div class="govuk-grid-row">
+          $1
+      </div>$2
+      """
+  'Column':
+      'leftLabel' : 'GOV.UK'
+      'description': 'Column - GOV.UK Design System'
+      'descriptionMoreURL': 'https://design-system.service.gov.uk/styles/layout'
+      'prefix': 'gov-layout-column'
+      'body': """
+      {# Column size class suffixes: full, one-half, one-third, two-thirds, one-quarter #}
+      <div class="govuk-grid-column-${1:size}">
+          $2
+      </div>$3
+      """
+  # TYPOGRAPHY
+  'Link':
+      'leftLabel' : 'GOV.UK'
+      'description': 'Link - GOV.UK Design System'
+      'descriptionMoreURL': 'https://design-system.service.gov.uk/styles/typography/#links'
+      'prefix': 'gov-typo-link'
+      'body': """
+      <a class="govuk-link" href="${1:destination}"></a>$2
+      """
+  'Header text':
+      'leftLabel' : 'GOV.UK'
+      'description': 'Header text - GOV.UK Design System'
+      'descriptionMoreURL': 'https://design-system.service.gov.uk/styles/typography/#headings'
+      'prefix': 'gov-typo-header-text'
+      'body': """
+      <${1:h1} class="govuk-heading-${2:xl}">$3</${1:h1}>$4
+      """
+  'Paragraph text':
+      'leftLabel' : 'GOV.UK'
+      'description': 'Paragraph text - GOV.UK Design System'
+      'descriptionMoreURL': 'https://design-system.service.gov.uk/styles/typography/#paragraphs'
+      'prefix': 'gov-typo-paragraph-text'
+      'body': """
+      {# Paragraph font size class suffixes: -l or -s #}
+      <p class="govuk-body$1">$2</p>$3
+      """
+  'List':
+      'leftLabel' : 'GOV.UK'
+      'description': 'List - GOV.UK Design System'
+      'descriptionMoreURL': 'https://design-system.service.gov.uk/styles/typography/#lists'
+      'prefix': 'gov-typo-list'
+      'body': """
+      {# Remove 'govuk-list--bullet' class for standard list #}
+      <ul class="govuk-list ${1:govuk-list--bullet}">
+          <li>$2</li>
+      </ul>$3
+      """
+  'Numbered list':
+      'leftLabel' : 'GOV.UK'
+      'description': 'Numbered list - GOV.UK Design System'
+      'descriptionMoreURL': 'https://design-system.service.gov.uk/styles/typography/#numbered-lists'
+      'prefix': 'gov-typo-number-list'
+      'body': """
+      <ol class="govuk-list govuk-list--number">
+          <li>$1</li>
+      </ol>$2
+      """
+  'Section break':
+      'leftLabel' : 'GOV.UK'
+      'description': 'Section break - GOV.UK Design System'
+      'descriptionMoreURL': 'https://design-system.service.gov.uk/styles/typography/#section-break'
+      'prefix': 'gov-typo-section-break'
+      'body': """
+      {# Paragraph font size class suffixes: -xl, -l or -m #}
+      <hr class="govuk-section-break govuk-section-break-${1:-xl} govuk-section-break--visible">$2
+      """
+  'Back link':
+      'leftLabel' : 'GOV.UK'
+      'description': 'Back link - GOV.UK Design System'
+      'descriptionMoreURL': 'https://design-system.service.gov.uk/components/back-link/'
+      'prefix': 'gov-back-link'
+      'body': """
+      {{ govukBackLink({
+          text: '${1:Back}',
+          href: '${2:javascript:history.back()}'
+      }) }}$3
+      """
+  'Warning text':
+      'leftLabel' : 'GOV.UK'
+      'description': 'Warning text - GOV.UK Design System'
+      'descriptionMoreURL': 'https://design-system.service.gov.uk/components/warning-text/'
+      'prefix': 'gov-warning-text'
+      'body': """
+      {{ govukWarningText({
+          text: '$1',
+          iconFallbackText: '${2:Warning}'
+      }) }}$3
+      """
+  'Inset text':
+      'leftLabel' : 'GOV.UK'
+      'description': 'Inset text - GOV.UK Design System'
+      'descriptionMoreURL': 'https://design-system.service.gov.uk/components/inset-text/'
+      'prefix': 'gov-inset-text'
+      'body': """
+      {{ govukInsetText({
+          text: '$1'
+      }) }}$2
+      """
+  'Breadcrumbs':
+      'leftLabel' : 'GOV.UK'
+      'description': 'Breadcrumbs - GOV.UK Design System'
+      'descriptionMoreURL': 'https://design-system.service.gov.uk/components/breadcrumbs/'
+      'prefix': 'gov-breadcrumbs'
+      'body': """
+      {{ govukBreadcrumbs({
+          items: [
+              {
+                  text: '${1:Home}',
+                  href: '${2:#}'
+              },
+              {
+                  text: '${3:Page name}'
+              }
+          ]
+      }) }}$4
+      """
+  'Link button':
+      'leftLabel' : 'GOV.UK'
+      'description': 'Link button - GOV.UK Design System'
+      'descriptionMoreURL': 'https://design-system.service.gov.uk/components/button/'
+      'prefix': 'gov-link-button'
+      'body': """
+      {# Remove the class 'govuk-button--start' for a standard button #}
+      {{ govukButton({
+          text: '${1:Start}',
+          href: '${2:#}',
+          classes: '${3:govuk-button--start}'
+      }) }}$4
+      """
+# FORM ELEMENTS
+  'Form submit button':
+      'leftLabel' : 'GOV.UK'
+      'description': 'Form submit button - GOV.UK Design System'
+      'descriptionMoreURL': 'https://design-system.service.gov.uk/components/button/'
+      'prefix': 'gov-form-button'
+      'body': """
+      {{ govukButton({
+          html: '${1:Save and continue}'
+      }) }}$2
+      """
+  'Text input':
+      'leftLabel' : 'GOV.UK'
+      'description': 'Text input - GOV.UK Design System'
+      'descriptionMoreURL': 'https://design-system.service.gov.uk/components/text-input/'
+      'prefix': 'gov-form-text'
+      'body': """
+      {# Input size classes: govuk-input--width-10, govuk-input--width-20 or any support size class from https://design-system.service.gov.uk/styles/spacing/#width-override-classes #}
+      {{ govukInput({
+          id: '$1',
+          name: '$1',
+          classes: '$2',
+          label: {
+              text: '${3:Label}',
+              classes: '$2'
+          }
+      }) }}$4
+      """
+  'Text input with hint':
+      'leftLabel' : 'GOV.UK'
+      'description': 'Text input with hint - GOV.UK Design System'
+      'descriptionMoreURL': 'https://design-system.service.gov.uk/components/text-input/'
+      'prefix': 'gov-form-text-hint'
+      'body': """
+      {# Input size classes: govuk-input--width-10, govuk-input--width-20 or any support size class from https://design-system.service.gov.uk/styles/spacing/#width-override-classes #}
+      {{ govukInput({
+          id: '$1',
+          name: '$1',
+          classes: '$2',
+          label: {
+              text: '${4:Label}',
+              classes: '$2'
+          },
+        hint: {
+            text: '${3:Hint Text}',
+            classes: ' '
+        }
+      }) }}$5
+      """
+  'Textarea':
+      'leftLabel' : 'GOV.UK'
+      'description': 'Textarea - GOV.UK Design System'
+      'descriptionMoreURL': 'https://design-system.service.gov.uk/components/textarea/'
+      'prefix': 'gov-form-textarea'
+      'body': """
+      {{ govukTextarea({
+          id: '$1',
+          name: '$1',
+          label: {
+              text: '${2:Label}'
+          }
+      }) }}$3
+      """
+  'Textarea with hint':
+      'leftLabel' : 'GOV.UK'
+      'description': 'Textarea with hint - GOV.UK Design System'
+      'descriptionMoreURL': 'https://design-system.service.gov.uk/components/textarea/'
+      'prefix': 'gov-form-textarea-hint'
+      'body': """
+      {{ govukTextarea({
+          id: '$1',
+          name: '$1',
+          label: {
+              text: '${2:Label}'
+          },
+          hint: {
+              text: '${3:Hint text}'
+          }
+      }) }}$4
+      """
+  'Radios':
+      'leftLabel' : 'GOV.UK'
+      'description': 'Radios - GOV.UK Design System'
+      'descriptionMoreURL': 'https://design-system.service.gov.uk/components/radios/'
+      'prefix': 'gov-form-radios'
+      'body': """
+      {{ govukRadios({
+          idPrefix: '$1',
+          name: '$1',
+          fieldset: {
+              legend: {
+                  text: '${2:Legend text}',
+                  isPageHeading: true,
+                  classes: 'govuk-fieldset__legend--xl'
+              }
+          },
+          hint: {
+              text: '${3:Hint text}'
+          },
+          items: [
+            ${4:Use gov-form-option}
+          ]
+      }) }}$5
+      """
+  'Inline radios ':
+      'leftLabel' : 'GOV.UK'
+      'description': 'Inline radios  - GOV.UK Design System'
+      'descriptionMoreURL': 'https://design-system.service.gov.uk/components/radios/'
+      'prefix': 'gov-form-radios-inline'
+      'body': """
+      {{ govukRadios({
+          classes: 'govuk-radios--inline',
+          idPrefix: '$1',
+          name: '$1',
+          fieldset: {
+              legend: {
+                  text: '${2:Legend text}',
+                  isPageHeading: true,
+                  classes: 'govuk-fieldset__legend--xl'
+              }
+          },
+          hint: {
+              text: '${3:Hint text}'
+          },
+          items: [
+            ${4:Use gov-form-option}
+          ]
+      }) }}$5
+      """
+  'Checkboxes':
+      'leftLabel' : 'GOV.UK'
+      'description': 'Checkboxes - GOV.UK Design System'
+      'descriptionMoreURL': 'https://design-system.service.gov.uk/components/checkboxes/'
+      'prefix': 'gov-form-checkboxes'
+      'body': """
+      {{ govukCheckboxes({
+          idPrefix: '$1',
+          name: '$1',
+          fieldset: {
+              legend: {
+                  text: '${2:Legend text}',
+                  isPageHeading: true,
+                  classes: 'govuk-fieldset__legend--xl'
+              }
+          },
+          hint: {
+              text: '${3:Hint text}'
+          },
+          items: [
+            ${4:Use gov-form-option}
+          ]
+      }) }}$5
+      """
+  'Radio or checkbox option':
+      'leftLabel' : 'GOV.UK'
+      'description': 'Radio or checkbox option - GOV.UK Design System'
+      'prefix': 'gov-form-option'
+      'body': """
+      {
+          value: '$1',
+          text: '$2'
+      }$3
+      """
+  'Date input':
+      'leftLabel' : 'GOV.UK'
+      'description': 'Date input - GOV.UK Design System'
+      'descriptionMoreURL': 'https://design-system.service.gov.uk/components/date-input/'
+      'prefix': 'gov-form-date-input'
+      'body': """
+      {{ govukDateInput({
+          id: '$1',
+          name: '$1',
+          fieldset: {
+              legend: {
+                  text: '${2:Legend text}',
+                  isPageHeading: true,
+                  classes: 'govuk-fieldset__legend--xl'
+              }
+          },
+          hint: {
+              text: '${3:Hint text}'
+          },
+          items: [
+              {
+                  name: 'day'
+              },
+              {
+                  name: 'month'
+              },
+              {
+                  name: 'year'
+              }
+          ]
+      }) }}$4
+      """
+  'File upload':
+      'leftLabel' : 'GOV.UK'
+      'description': 'File upload - GOV.UK Design System'
+      'descriptionMoreURL': 'https://design-system.service.gov.uk/components/file-upload/'
+      'prefix': 'gov-form-file-upload'
+      'body': """
+      {{ govukFileUpload({
+          id: '$1',
+          name: '$1',
+          label: {
+              text: '${2:Upload a file}'
+          }
+      }) }}
+      """

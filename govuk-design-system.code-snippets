@@ -1,20 +1,5 @@
 {
-	// Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
-	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
-	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
-	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
-	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
-	// Placeholders with the same ids are connected.
-	// Example:
-	// "Print to console": {
-	// 	"scope": "javascript,typescript",
-	// 	"prefix": "log",
-	// 	"body": [
-	// 		"console.log('$1');",
-	// 		"$2"
-	// 	],
-	// 	"description": "Log output to console"
-	// }
+	// GOV.UK Design System snippets for Visual Studio Code 
 
 	// COMMON LAYOUTS
 
@@ -22,12 +7,12 @@
 		"prefix": "gov-layout-twothirds",
 		"scope": "html,nunjucks",
         "body": [
-					"<div class=\"govuk-grid-row\">",
-					"\t<div class=\"govuk-grid-column-two-thirds\">",
-					"\t\t<h1 class=\"govuk-heading-xl\">Two-thirds column</h1>",
-					"\t\t<p class=\"govuk-body\">This is a paragraph inside a two-thirds wide column</p>",
-					"\t</div>",
-					"</div>",
+			"<div class=\"govuk-grid-row\">",
+			"\t<div class=\"govuk-grid-column-two-thirds\">",
+			"\t\t<h1 class=\"govuk-heading-xl\">Two-thirds column</h1>",
+			"\t\t<p class=\"govuk-body\">This is a paragraph inside a two-thirds wide column</p>",
+			"\t</div>",
+			"</div>"
         ],
         "description": "Two-thirds layout - GOV.UK Design System"
 	},
@@ -36,17 +21,17 @@
 		"prefix": "gov-layout-twothirds-onethird",
 		"scope": "html,nunjucks",
         "body": [
-          "<div class='govuk-grid-row'>",
-					"\t<div class=\"govuk-grid-column-two-thirds\">",
-					"\t\t<h1 class=\"govuk-heading-xl\">Two-thirds column</h1>",
-					"\t\t<p class=\"govuk-body\">This is a paragraph inside a two-thirds wide column</p>",
-					"\t</div>",
-					"",
-					"\t<div class=\"govuk-grid-column-one-thirds\">",
-					"\t\t<h1 class=\"govuk-heading-xl\">One-thirds column</h1>",
-					"\t\t<p class=\"govuk-body\">This is a paragraph inside a one-thirds wide column</p>",
-					"\t</div>",
-					"</div>",
+			"<div class='govuk-grid-row'>",
+			"\t<div class=\"govuk-grid-column-two-thirds\">",
+			"\t\t<h1 class=\"govuk-heading-xl\">Two-thirds column</h1>",
+			"\t\t<p class=\"govuk-body\">This is a paragraph inside a two-thirds wide column</p>",
+			"\t</div>",
+			"",
+			"\t<div class=\"govuk-grid-column-one-thirds\">",
+			"\t\t<h1 class=\"govuk-heading-xl\">One-thirds column</h1>",
+			"\t\t<p class=\"govuk-body\">This is a paragraph inside a one-thirds wide column</p>",
+			"\t</div>",
+			"</div>"
         ],
         "description": "Two-thirds one-third layout - GOV.UK Design System"
 	},
@@ -55,9 +40,9 @@
 		"prefix": "gov-layout-grid-row",
 		"scope": "html,nunjucks",
         "body": [
-					"<div class=\"govuk-grid-row\">",
-					"\t$1",
-					"</div>"
+			"<div class=\"govuk-grid-row\">",
+			"\t$1",
+			"</div>"
         ],
         "description": "Grid row - GOV.UK Design System"
 	},
@@ -66,9 +51,9 @@
 		"prefix": "gov-layout-column",
 		"scope": "html,nunjucks",
         "body": [
-					"<div class=\"${1|govuk-grid-column-full,govuk-grid-column-half,govuk-grid-column-one-third,govuk-grid-column-two-thirds,govuk-grid-column-one-quarter|}\">",
-					"\t$2",
-					"</div>"
+			"<div class=\"${1|govuk-grid-column-full,govuk-grid-column-half,govuk-grid-column-one-third,govuk-grid-column-two-thirds,govuk-grid-column-one-quarter|}\">",
+			"\t$2",
+			"</div>"
         ],
         "description": "Grid row - GOV.UK Design System"
 	},
@@ -79,7 +64,7 @@
 		"prefix": "gov-typo-link",
 		"scope": "html,nunjucks",
         "body": [
-          "<a class=\"govuk-link\" href=\"${1:destination}\">$2</a>"
+			"<a class=\"govuk-link\" href=\"${1:destination}\">$2</a>"
         ],
         "description": "Link - GOV.UK Design System"
 	},
@@ -88,7 +73,7 @@
 		"prefix": "gov-typo-header-text",
 		"scope": "html,nunjucks",
         "body": [
-          "<${1|h1,h2,h3,h4,h5,h6|} class=\"govuk-heading-${2|xl,l,m,s|}\">$3</${1}>"
+			"<${1|h1,h2,h3,h4,h5,h6|} class=\"govuk-heading-${2|xl,l,m,s|}\">$3</${1}>"
         ],
         "description": "Header - GOV.UK Design System"
 	},
@@ -97,7 +82,7 @@
 		"prefix": "gov-typo-paragraph-text",
 		"scope": "html,nunjucks",
         "body": [
-          "<p class=\"${1|govuk-body,govuk-body-l,govuk-body-s|}\">$2</p>"
+			"<p class=\"${1|govuk-body,govuk-body-l,govuk-body-s|}\">$2</p>"
         ],
         "description": "Paragraph text - GOV.UK Design System"
 	},
@@ -106,9 +91,9 @@
 		"prefix": "gov-typo-list",
 		"scope": "html,nunjucks",
         "body": [
-					"<ul class=\"${1|govuk-list,govuk-list govuk-list--bullet|}\">",
-					"\t<li>$2</li>",
-					"</ul>",
+			"<ul class=\"${1|govuk-list,govuk-list govuk-list--bullet|}\">",
+			"\t<li>$2</li>",
+			"</ul>"
         ],
         "description": "List - GOV.UK Design System"
 	},
@@ -117,9 +102,9 @@
 		"prefix": "gov-typo-number-list",
 		"scope": "html,nunjucks",
         "body": [
-					"<ol class=\"govuk-list govuk-list--number\">",
-					"\t<li>$1</li>",
-					"</ol>",
+			"<ol class=\"govuk-list govuk-list--number\">",
+			"\t<li>$1</li>",
+			"</ol>"
         ],
         "description": "Numbered list - GOV.UK Design System"
 	},
@@ -128,7 +113,7 @@
 		"prefix": "gov-typo-section-break",
 		"scope": "html,nunjucks",
         "body": [
-					"<hr class=\"govuk-section-break ${1|govuk-section-break--xl,govuk-section-break--l,govuk-section-break--m, |} govuk-section-break--visible\">"
+			"<hr class=\"govuk-section-break ${1|govuk-section-break--xl,govuk-section-break--l,govuk-section-break--m, |} govuk-section-break--visible\">"
         ],
         "description": "Section break - GOV.UK Design System"
 	},
@@ -139,10 +124,10 @@
 		"prefix": "gov-back-link",
 		"scope": "html,nunjucks",
         "body": [
-					"{{ govukBackLink({",
-					"\ttext: '${1:Back}',",
-					"\thref: '${2:javascript:history.back()}'",
-					"}) }}"
+			"{{ govukBackLink({",
+			"\ttext: '${1:Back}',",
+			"\thref: '${2:javascript:history.back()}'",
+			"}) }}"
         ],
         "description": "Back link - GOV.UK Design System"
 	},
@@ -151,10 +136,10 @@
 		"prefix": "gov-warning-text",
 		"scope": "html,nunjucks",
         "body": [
-					"{{ govukWarningText({",
-					"\ttext: '$1',",
-					"\ticonFallbackText: '${2:Warning}'",
-					"}) }}"
+			"{{ govukWarningText({",
+			"\ttext: '$1',",
+			"\ticonFallbackText: '${2:Warning}'",
+			"}) }}"
         ],
         "description": "Warning text - GOV.UK Design System"
 	},
@@ -163,9 +148,9 @@
 		"prefix": "gov-inset-text",
 		"scope": "html,nunjucks",
         "body": [
-					"{{ govukInsetText({",
-					"\ttext: '$1'",
-					"}) }}"
+			"{{ govukInsetText({",
+			"\ttext: '$1'",
+			"}) }}"
         ],
         "description": "Inset text - GOV.UK Design System"
 	},
@@ -174,17 +159,17 @@
 		"prefix": "gov-breadcrumbs",
 		"scope": "html,nunjucks",
         "body": [
-					"{{ govukBreadcrumbs({",
-					"\titems: [",
-					"\t\t{",
-					"\t\t\ttext: '${1:Home}',",
-					"\t\t\thref: '${2:#}'",
-					"\t\t},",
-					"\t\t{",
-					"\t\t\ttext: '${3:Page name}'",
-					"\t\t}",
-					"\t]",
-					"}) }}"
+			"{{ govukBreadcrumbs({",
+			"\titems: [",
+			"\t\t{",
+			"\t\t\ttext: '${1:Home}',",
+			"\t\t\thref: '${2:#}'",
+			"\t\t},",
+			"\t\t{",
+			"\t\t\ttext: '${3:Page name}'",
+			"\t\t}",
+			"\t]",
+			"}) }}"
         ],
         "description": "Breadcrumbs - GOV.UK Design System"
 	},
@@ -193,11 +178,11 @@
 		"prefix": "gov-link-button",
 		"scope": "html,nunjucks",
         "body": [				
-					"{{ govukButton({",
-					"\ttext: '${1:Start}',",
-					"\thref: '${2:#}',",
-					"\tclasses: '${3| ,govuk-button--start|}'",
-					"}) }}"
+			"{{ govukButton({",
+			"\ttext: '${1:Start}',",
+			"\thref: '${2:#}',",
+			"\tclasses: '${3| ,govuk-button--start|}'",
+			"}) }}"
         ],
         "description": "Link button - GOV.UK Design System"
 	},
@@ -208,9 +193,9 @@
 		"prefix": "gov-form-button",
 		"scope": "html,nunjucks",
         "body": [
-					"{{ govukButton({",
-					"\thtml: '${1:Save and continue}'",
-					"}) }}"
+			"{{ govukButton({",
+			"\thtml: '${1:Save and continue}'",
+			"}) }}"
         ],
         "description": "Form submit button - GOV.UK Design System"
 	},
@@ -219,15 +204,15 @@
 		"prefix": "gov-form-text",
 		"scope": "html,nunjucks",
         "body": [
-					"{{ govukInput({",
-					"\tid: '$1',",
-					"\tname: '$1',",
-					"\tclasses: '${3| ,govuk-input--width-20,govuk-input--width-10|}',",
-					"\tlabel: {",
-					"\t\ttext: '${2:Label}',",
-					"\t\tclasses: '$3'",
-					"\t}",
-					"}) }}"
+			"{{ govukInput({",
+			"\tid: '$1',",
+			"\tname: '$1',",
+			"\tclasses: '${3| ,govuk-input--width-20,govuk-input--width-10|}',",
+			"\tlabel: {",
+			"\t\ttext: '${2:Label}',",
+			"\t\tclasses: '$3'",
+			"\t}",
+			"}) }}"
         ],
         "description": "Text input - GOV.UK Design System"
 	},
@@ -236,19 +221,19 @@
 		"prefix": "gov-form-text-hint",
 		"scope": "html,nunjucks",
         "body": [
-					"{{ govukInput({",
-					"\tid: '$1',",
-					"\tname: '$1',",
-					"\tclasses: '${4| ,govuk-input--width-20,govuk-input--width-10|}',",
-					"\tlabel: {",
-					"\t\ttext: '${2:Label}'",
-					"\t\tclasses: '$4'",
-					"\t},",
-					"\thint: {",
-					"\t\ttext: '${3:Hint Text}',",
-					"\t\tclasses: '$4'",
-					"\t}",
-					"}) }}"
+			"{{ govukInput({",
+			"\tid: '$1',",
+			"\tname: '$1',",
+			"\tclasses: '${4| ,govuk-input--width-20,govuk-input--width-10|}',",
+			"\tlabel: {",
+			"\t\ttext: '${2:Label}'",
+			"\t\tclasses: '$4'",
+			"\t},",
+			"\thint: {",
+			"\t\ttext: '${3:Hint text}',",
+			"\t\tclasses: '$4'",
+			"\t}",
+			"}) }}"
         ],
         "description": "Text input with hint text - GOV.UK Design System"
 	},
@@ -257,13 +242,13 @@
 		"prefix": "gov-form-textarea",
 		"scope": "html,nunjucks",
         "body": [
-					"{{ govukTextarea({",
-						"\tid: '$1',",
-						"\tname: '$1',",
-						"\tlabel: {",
-						"\t\ttext: '${2:Label}'",
-						"\t}",
-						"}) }}"
+			"{{ govukTextarea({",
+			"\tid: '$1',",
+			"\tname: '$1',",
+			"\tlabel: {",
+			"\t\ttext: '${2:Label}'",
+			"\t}",
+			"}) }}"
         ],
         "description": "Textarea - GOV.UK Design System"
 	},
@@ -272,104 +257,104 @@
 		"prefix": "gov-form-textarea-hint",
 		"scope": "html,nunjucks",
         "body": [
-					"{{ govukTextarea({",
-					"\tid: '$1',",
-					"\tname: '$1',",
-					"\tlabel: {",
-					"\t\ttext: '${2:Label}'",
-					"\t},",
-					"\thint: {",
-					"\t\ttext: '${3:Hint Text}'",
-					"\t}",
-					"}) }}"
+			"{{ govukTextarea({",
+			"\tid: '$1',",
+			"\tname: '$1',",
+			"\tlabel: {",
+			"\t\ttext: '${2:Label}'",
+			"\t},",
+			"\thint: {",
+			"\t\ttext: '${3:Hint text}'",
+			"\t}",
+			"}) }}"
         ],
         "description": "Textarea with hint - GOV.UK Design System"
 	},
 
-	"Radio buttons": {
-		"prefix": "gov-form-radio-buttons",
+	"Radios": {
+		"prefix": "gov-form-radios",
 		"scope": "html,nunjucks",
         "body": [
-					"{{ govukRadios({",
-					"\tidPrefix: '$1',",
-					"\tname: '$1',",
-					"\tfieldset: {",
-					"\t\tlegend: {",
-					"\t\t\ttext: '${2:Legend text}',",
-					"\t\t\tisPageHeading: true,",
-					"\t\t\tclasses: 'govuk-fieldset__legend--xl'",
-					"\t\t}",
-					"\t},",
-					"\thint: {",
-					"\t\ttext: '${3:Hint text}'",
-					"\t},",
-					"\titems: [",
-					"\t${4:Use gov-form-radio-checkbox-option}",
-					"\t]",
-					"}) }}"
+			"{{ govukRadios({",
+			"\tidPrefix: '$1',",
+			"\tname: '$1',",
+			"\tfieldset: {",
+			"\t\tlegend: {",
+			"\t\t\ttext: '${2:Legend text}',",
+			"\t\t\tisPageHeading: true,",
+			"\t\t\tclasses: 'govuk-fieldset__legend--xl'",
+			"\t\t}",
+			"\t},",
+			"\thint: {",
+			"\t\ttext: '${3:Hint text}'",
+			"\t},",
+			"\titems: [",
+			"\t${4:Use gov-form-option}",
+			"\t]",
+			"}) }}"
         ],
-        "description": "Radio buttons - GOV.UK Design System"
+        "description": "Radios - GOV.UK Design System"
+	},
+
+	"Inline radios": {
+		"prefix": "gov-form-radios-inline",
+		"scope": "html,nunjucks",
+        "body": [
+			"{{ govukRadios({",
+			"\tclasses: 'govuk-radios--inline',",
+			"\tidPrefix: '$1',",
+			"\tname: '$1',",
+			"\tfieldset: {",
+			"\t\tlegend: {",
+			"\t\t\ttext: '${2:Legend text}',",
+			"\t\t\tisPageHeading: true,",
+			"\t\t\tclasses: 'govuk-fieldset__legend--xl'",
+			"\t\t}",
+			"\t},",
+			"\thint: {",
+			"\t\ttext: '${3:Hint text}'",
+			"\t},",
+			"\titems: [",
+			"\t${4:Use gov-form-option}",
+			"\t]",
+			"}) }}"
+        ],
+        "description": "Inline radios - GOV.UK Design System"
 	},
 
 	"Checkboxes": {
-		"prefix": "gov-form-radio-buttons",
+		"prefix": "gov-form-checkboxes",
 		"scope": "html,nunjucks",
         "body": [
-					"{{ govukCheckboxes({",
-					"\tidPrefix: '$1',",
-					"\tname: '$1',",
-					"\tfieldset: {",
-					"\t\tlegend: {",
-					"\t\t\ttext: '${2:Legend text}',",
-					"\t\t\tisPageHeading: true,",
-					"\t\t\tclasses: 'govuk-fieldset__legend--xl'",
-					"\t\t}",
-					"\t},",
-					"\thint: {",
-					"\t\ttext: '${3:Hint text}'",
-					"\t},",
-					"\titems: [",
-					"\t${4:gov-form-radio-checkbox-option}",
-					"\t]",
-					"}) }}"
+			"{{ govukCheckboxes({",
+			"\tidPrefix: '$1',",
+			"\tname: '$1',",
+			"\tfieldset: {",
+			"\t\tlegend: {",
+			"\t\t\ttext: '${2:Legend text}',",
+			"\t\t\tisPageHeading: true,",
+			"\t\t\tclasses: 'govuk-fieldset__legend--xl'",
+			"\t\t}",
+			"\t},",
+			"\thint: {",
+			"\t\ttext: '${3:Hint text}'",
+			"\t},",
+			"\titems: [",
+			"\t${4:gov-form-option}",
+			"\t]",
+			"}) }}"
         ],
         "description": "Radio buttons - GOV.UK Design System"
-	},
-
-	"Inline radio buttons": {
-		"prefix": "gov-form-radio-buttons-inline",
-		"scope": "html,nunjucks",
-        "body": [
-					"{{ govukRadios({",
-					"\tclasses: 'govuk-radios--inline',",
-					"\tidPrefix: '$1',",
-					"\tname: '$1',",
-					"\tfieldset: {",
-					"\t\tlegend: {",
-					"\t\t\ttext: '${2:Legend text}',",
-					"\t\t\tisPageHeading: true,",
-					"\t\t\tclasses: 'govuk-fieldset__legend--xl'",
-					"\t\t}",
-					"\t},",
-					"\thint: {",
-					"\t\ttext: '${3:Hint text}'",
-					"\t},",
-					"\titems: [",
-					"\t${4:Use gov-form-radio-checkbox-option}",
-					"\t]",
-					"}) }}"
-        ],
-        "description": "Inline radio buttons - GOV.UK Design System"
 	},
 
 	"Radio or checkbox option": {
 		"prefix": "gov-form-option",
 		"scope": "html,nunjucks",
         "body": [
-					"{",
-					"\tvalue: '$1',",
-					"\ttext: '$2'",
-					"}"
+			"{",
+			"\tvalue: '$1',",
+			"\ttext: '$2'",
+			"}"
         ],
         "description": "Radio or checkbox option - GOV.UK Design System"
 	},
@@ -378,31 +363,31 @@
 		"prefix": "gov-form-date-input",
 		"scope": "html,nunjucks",
         "body": [
-					"{{ govukDateInput({",
-					"\tid: '$1',",
-					"\tname: '$1',",
-					"\tfieldset: {",
-					"\t\tlegend: {",
-					"\t\t\ttext: '${2:Legend text}',",
-					"\t\t\tisPageHeading: true,",
-					"\t\t\tclasses: 'govuk-fieldset__legend--xl'",
-					"\t\t}",
-					"\t},",
-					"\thint: {",
-					"\t\ttext: '${3:Hint text}'",
-					"\t},",
-					"\titems: [",
-					"\t\t{",
-					"\t\t\tname: 'day'",
-					"\t\t},",
-					"\t\t{",
-					"\t\t\tname: 'month'",
-					"\t\t},",
-					"\t\t{",
-					"\t\t\tname: 'year'",
-					"\t\t}",
-					"\t]",
-					"}) }}"
+			"{{ govukDateInput({",
+			"\tid: '$1',",
+			"\tname: '$1',",
+			"\tfieldset: {",
+			"\t\tlegend: {",
+			"\t\t\ttext: '${2:Legend text}',",
+			"\t\t\tisPageHeading: true,",
+			"\t\t\tclasses: 'govuk-fieldset__legend--xl'",
+			"\t\t}",
+			"\t},",
+			"\thint: {",
+			"\t\ttext: '${3:Hint text}'",
+			"\t},",
+			"\titems: [",
+			"\t\t{",
+			"\t\t\tname: 'day'",
+			"\t\t},",
+			"\t\t{",
+			"\t\t\tname: 'month'",
+			"\t\t},",
+			"\t\t{",
+			"\t\t\tname: 'year'",
+			"\t\t}",
+			"\t]",
+			"}) }}"
         ],
         "description": "Date input - GOV.UK Design System"
 	},
@@ -411,16 +396,16 @@
 		"prefix": "gov-form-file-upload",
 		"scope": "html,nunjucks",
         "body": [
-					"{{ govukFileUpload({",
-						"\tid: '$1',",
-						"\tname: '$1',",
-						"\tlabel: {",
-						"\t\ttext: '${2:Upload a file}'",
-						"\t}",
-						"}) }}"
+			"{{ govukFileUpload({",
+			"\tid: '$1',",
+			"\tname: '$1',",
+			"\tlabel: {",
+			"\t\ttext: '${2:Upload a file}'",
+			"\t}",
+			"}) }}"
         ],
         "description": "File upload - GOV.UK Design System"
 	},
 
-
 }
+
