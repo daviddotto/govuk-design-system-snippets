@@ -51,7 +51,7 @@
 		"prefix": "gov-layout-column",
 		"scope": "html,nunjucks",
         "body": [
-			"<div class=\"${1|govuk-grid-column-full,govuk-grid-column-half,govuk-grid-column-one-third,govuk-grid-column-two-thirds,govuk-grid-column-one-quarter|}\">",
+			"<div class=\"${1|govuk-grid-column-full,govuk-grid-column-one-half,govuk-grid-column-one-third,govuk-grid-column-two-thirds,govuk-grid-column-one-quarter|}\">",
 			"\t$2",
 			"</div>"
         ],
