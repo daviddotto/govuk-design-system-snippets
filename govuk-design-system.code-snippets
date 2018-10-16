@@ -207,6 +207,7 @@
 			"{{ govukInput({",
 			"\tid: '$1',",
 			"\tname: '$1',",
+			"\tvalue: data['$1'] if data['$1'] else '',",
 			"\tclasses: '${3| ,govuk-input--width-20,govuk-input--width-10|}',",
 			"\tlabel: {",
 			"\t\ttext: '${2:Label}',",
@@ -224,6 +225,7 @@
 			"{{ govukInput({",
 			"\tid: '$1',",
 			"\tname: '$1',",
+			"\tvalue: data['$1'] if data['$1'] else '',",
 			"\tclasses: '${4| ,govuk-input--width-20,govuk-input--width-10|}',",
 			"\tlabel: {",
 			"\t\ttext: '${2:Label}'",
@@ -245,6 +247,7 @@
 			"{{ govukTextarea({",
 			"\tid: '$1',",
 			"\tname: '$1',",
+			"\tvalue: data['$1'] if data['$1'] else '',",
 			"\tlabel: {",
 			"\t\ttext: '${2:Label}'",
 			"\t}",
@@ -260,6 +263,7 @@
 			"{{ govukTextarea({",
 			"\tid: '$1',",
 			"\tname: '$1',",
+			"\tvalue: data['$1'] if data['$1'] else '',",
 			"\tlabel: {",
 			"\t\ttext: '${2:Label}'",
 			"\t},",
@@ -322,6 +326,36 @@
         "description": "Inline radios - GOV.UK Design System"
 	},
 
+	"Yes/no radios": {
+		"prefix": "gov-form-radios-yes-no",
+		"scope": "html,nunjucks",
+        "body": [
+			"{{ govukRadios({",
+			"\tclasses: 'govuk-radios--inline',",
+			"\tidPrefix: '$1',",
+			"\tname: '$1',",
+			"\tfieldset: {",
+			"\t\tlegend: {",
+			"\t\t\ttext: '${2:Legend text}',",
+			"\t\t\tisPageHeading: true,",
+			"\t\t\tclasses: 'govuk-fieldset__legend--xl'",
+			"\t\t}",
+			"\t\t\t},",
+			"\t\t\titems: [",
+			"\t\t{",
+			"\t\t\ttext: 'Yes',",
+			"\t\t\tvalue: 'yes'",
+			"\t\t},",
+			"\t\t{",
+			"\t\t\ttext: 'No',",
+			"\t\t\tvalue: 'no'",
+			"\t\t}",
+			"\t]",
+			"}) }}"
+        ],
+        "description": "Inline radios - GOV.UK Design System"
+	},
+
 	"Checkboxes": {
 		"prefix": "gov-form-checkboxes",
 		"scope": "html,nunjucks",
@@ -340,7 +374,7 @@
 			"\t\ttext: '${3:Hint text}'",
 			"\t},",
 			"\titems: [",
-			"\t${4:gov-form-option}",
+			"\t${4:Use gov-form-option}",
 			"\t]",
 			"}) }}"
         ],
@@ -352,8 +386,8 @@
 		"scope": "html,nunjucks",
         "body": [
 			"{",
-			"\tvalue: '$1',",
-			"\ttext: '$2'",
+			"\ttext: '$1',",
+			"\tvalue: '$2'",
 			"}"
         ],
         "description": "Radio or checkbox option - GOV.UK Design System"
@@ -405,6 +439,48 @@
 			"}) }}"
         ],
         "description": "File upload - GOV.UK Design System"
+	},
+
+	"Form page": {
+		"prefix": "prototype-form-page",
+		"scope": "html,nunjucks",
+        "body": [
+			"{% extends 'layout.html' %}",
+			"",
+			"{% block pageTitle %}",
+			"\t${1:Page title}",
+			"{% endblock %}",
+			"",
+			"{% block content %}",
+			"",
+			"<div class=\"govuk-grid-row\">",
+			"",
+			"\t\t<div class=\"govuk-grid-column-two-thirds\">",
+			"",
+			"\t\t\t{{ govukBackLink({",
+			"\t\t\t\ttext: 'Back',",
+            "\t\t\t\thref: 'javascript:history.back()'",
+            "\t\t\t}) }}",
+			"",
+			"\t\t\t<form method=\"post\">",
+			"",
+			"\t\t\t\t<h1 class=\"govuk-heading-xl\">$1</h1>",
+			"",
+			"\t\t\t\t$2",
+			"",
+			"\t\t\t\t{{ govukButton({",
+			"\t\t\t\t\thtml: 'Save and continue'",
+			"\t\t\t\t}) }}",
+			"",
+			"\t\t\t</form>",
+			"",
+			"\t\t</div>",
+			"",
+			"</div>",
+			"",
+			"{% endblock %}"
+        ],
+        "description": "Form page - GOV.UK Prototype kit"
 	},
 
 }
