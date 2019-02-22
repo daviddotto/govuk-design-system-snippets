@@ -441,6 +441,105 @@
         "description": "File upload - GOV.UK Design System"
 	},
 
+	"Accordion": {
+		"prefix": "gov-accordion",
+		"scope": "html,nunjucks",
+		"body": [
+			"{{ govukAccordion({",
+			"\tid: 'accordion-default',",
+			"\titems: [",
+			"\t\t{",
+			"\t\t\theading: {",
+			"\t\t\t\ttext: '$1'",
+			"\t\t\t},",
+			"\t\t\tcontent: {",
+			"\t\t\t\thtml: '<p>$2</p>'",
+			"\t\t\t}",
+			"\t\t}",
+			"\t]",
+			"}) }}"
+		],
+		"description": "Accordion - GOV.UK Design System"
+	},
+
+	"Character count": {
+		"prefix": "gov-character-count",
+		"scope": "html,nunjucks",
+		"body": [
+			"{{ govukCharacterCount({",
+			"\tname: '$1',",
+			"\tid: '$1',",
+			"\tmaxlength: '${2:200}',",
+			"\tlabel: {",
+			"\t\ttext: '$3'",
+			"\t},",
+			"\thint: {",
+			"\t\ttext: '$4'",
+			"\t}",
+			"}) }}"
+		],
+		"description": "Character count - GOV.UK Design System"
+	},
+
+	"Summary list": {
+		"prefix": "gov-summary-list",
+		"scope": "html,nunjucks",
+		"body": [
+			"{{ govukSummaryList({",
+			"\trows: [",
+			"\t\t{",
+			"\t\t\tkey: {",
+			"\t\t\t\ttext: '$1'",
+			"\t\t\t},",
+			"\t\t\tvalue: {",
+			"\t\t\t\ttext: '$2'",
+			"\t\t\t},",
+			"\t\t\taction: {",
+			"\t\t\t\titems: [",
+			"\t\t\t\t\t{",
+			"\t\t\t\t\t\ttext: '${3:Change}',",
+			"\t\t\t\t\t\thref: '${4:#}',",
+			"\t\t\t\t\t\tvisuallyHiddenText: '$5'",
+			"\t\t\t\t\t}",
+			"\t\t\t\t]",
+			"\t\t\t}",
+			"\t\t}",
+			"\t}",
+			"}) }}"
+		],
+		"description": "Summary list - GOV.UK Design System"
+	},
+
+	"Tabs": {
+		"prefix": "gov-tabs",
+		"scope": "html,nunjucks",
+		"body": [
+			"{{ govukTabs({",
+			"\titems: [",
+			"\t\t{",
+			"\t\t\tlabel: '$1',",
+			"\t\t\tid: '$2',",
+			"\t\t\tpanel: {",
+			"\t\t\t\thtml: '$3'",
+			"\t\t\t}",
+			"\t\t}",
+			"\t]",
+			"}) }}"
+		],
+		"description": "Tabs - GOV.UK Design System"
+	},
+
+	"Tag": {
+		"prefix": "gov-tag",
+		"scope": "html,nunjucks",
+		"body": [
+			"{{ govukTag({",
+			"\ttext: '$1'",
+			"}) }}"
+		],
+		"description": "Tag - GOV.UK Design System"
+	},
+
 	"Form page": {
 		"prefix": "prototype-form-page",
 		"scope": "html,nunjucks",
@@ -484,4 +583,3 @@
 	},
 
 }
-

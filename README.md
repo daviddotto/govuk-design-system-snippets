@@ -1,4 +1,5 @@
 # GOV.UK Design System Snippets
+v2
 
 GOV.UK Design System Nunjucks macro snippets for popular code editors. For use by UK government designers. 
 
@@ -52,7 +53,14 @@ Visual Studio Code has the added benefit of allowing users to choose from a list
 | Radio or checkbox option      | `gov-form-option`               | **1.** Value of item when selected **2.** Text to display in label                                                                                                                                                        | N/A                                                                      |
 | Date input                    | `gov-form-date-input`           | **1.** Name and ID prefix, for example using `'dob'` would produce names and IDs of `'dob-day'`,`'dob-month'` and `'dob-year'` **2.** Legend text, typically a question **3.** Hint text, remove `hint: {*},` if not required | [Components - Date input](https://design-system.service.gov.uk/components/date-input/)              |
 | File upload                   | `gov-form-file-upload`          | **1.** Name and ID **2.** Label, default: `'Upload a file'`                                                                                                                                                               | [Components - File upload](https://design-system.service.gov.uk/components/file-upload/)             |
+| Accordion                  | `gov-accordion`          | **1.** Text for title of accordion section **2.** HTML fo when section is expanded                                                                                                                                                               | [Components - Accordion](https://design-system.service.gov.uk/components/accordion/)             |
+| Character count                  | `gov-character-count`          | **1.** Name and ID of the `textarea` element **2.** Character limit, default: `200` **3.** Text to display in label **4.** Hint text, remove `hint: {*},` if not required                                                                                                                                                                | [Components - Character count](https://design-system.service.gov.uk/components/character-count/)             |
+| Summary list                  | `gov-summary-list`          | **1.** Text for 'key' in list row **2.** Text for detail or description in list row **3.** Text for link, default `Change` **4.** URL for link, default `#` **5.** Suffix text for change link for screen readers                                                                                                                                                              | [Components - Summary list](https://design-system.service.gov.uk/components/summary-list/)             |
+| Tabs                  | `gov-tabs`          | **1.** Text for tab label **2.** ID for tab element **3.** Panel HTML                                                                                                                                                             | [Components - Tabs](https://design-system.service.gov.uk/components/tabs/)             |
+| Tag                  | `gov-tag`          | **1.** Text for tag title                                                                                                                                                            | [Components - Tag](https://design-system.service.gov.uk/components/tag/)             |
+| Question page                  | `gov-question-page`          | **1.** Text for page title **2.** Page content                                                                                                                                                          | [Patterns - Question page](https://design-system.service.gov.uk/patterns/question-pages/)             |
+
 
 ## Roadmap
 
-We're currently working on porting these snippets to Sublime Text. Any and all feedback would be appreciated.
+Next steps are to bring in more page templates, including confirmation pages etc.

@@ -393,3 +393,138 @@
           }
       }) }}
       """
+  'Accordion':
+      'leftLabel' : 'GOV.UK'
+      'description': 'Accordion - GOV.UK Design System'
+      'descriptionMoreURL': 'https://design-system.service.gov.uk/components/accordion/'
+      'prefix': 'gov-accordion'
+      'body': """
+        {{ govukAccordion({
+            id: 'accordion-default',
+            items: [
+                {
+                    heading: {
+                        text: '$1'
+                    },
+                    content: {
+                        html: '<p>$2</p>'
+                    }
+                }
+            ]
+        }) }}
+      """
+    'Character count':
+      'leftLabel' : 'GOV.UK'
+      'description': 'Character count - GOV.UK Design System'
+      'descriptionMoreURL': 'https://design-system.service.gov.uk/components/character-count/'
+      'prefix': 'gov-character-count'
+      'body': """
+        {{ govukCharacterCount({
+            name: '$1',
+            id: '$1',
+            maxlength: '${2:200}',
+            label: {
+                text: '$3'
+            },
+            hint: {
+                text: '$4'
+            }
+        }) }}
+      """
+    'Summary list':
+      'leftLabel' : 'GOV.UK'
+      'description': 'Character count - GOV.UK Design System'
+      'descriptionMoreURL': 'https://design-system.service.gov.uk/components/summary-list/'
+      'prefix': 'gov-summary-list'
+      'body': """
+        {{ govukSummaryList({
+            rows: [
+                {
+                    key: {
+                        text: '$1'
+                    },
+                    value: {
+                        text: '$2'
+                    },
+                    action: {
+                        items: [
+                            {
+                                text: '${3:Change}',
+                                href: '${4:#}',
+                                visuallyHiddenText: '$5'
+                            }
+                        ]
+                    }
+                }
+            }
+        }) }}
+      """
+    'Tabs':
+      'leftLabel' : 'GOV.UK'
+      'description': 'Tabs - GOV.UK Design System'
+      'descriptionMoreURL': 'https://design-system.service.gov.uk/components/tabs/'
+      'prefix': 'gov-tabs'
+      'body': """
+        {{ govukTabs({
+            items: [
+                {
+                    label: '$1',
+                    id: '$2',
+                    panel: {
+                        html: '$3'
+                    }
+                }
+            ]
+        }) }}
+      """
+    'Tag':
+      'leftLabel' : 'GOV.UK'
+      'description': 'Tag - GOV.UK Design System'
+      'descriptionMoreURL': 'https://design-system.service.gov.uk/components/tag/'
+      'prefix': 'gov-tag'
+      'body': """
+        {{ govukTag({
+            text: '${1:Prototype}'
+        }) }}
+      """
+    'Question page':
+      'leftLabel' : 'GOV.UK'
+      'description': 'Question page - GOV.UK Design System'
+      'descriptionMoreURL': 'https://design-system.service.gov.uk/patterns/question-pages/'
+      'prefix': 'gov-question-page'
+      'body': """
+        {% extends 'layout.html' %}
+
+        {% block pageTitle %}
+            ${1:Page title}
+        {% endblock %}
+
+        {% block content %}
+
+        <div class="govuk-grid-row">
+
+                <div class="govuk-grid-column-two-thirds">
+
+                    {{ govukBackLink({
+                        text: 'Back',
+                        href: 'javascript:history.back()'
+                    }) }}
+
+                    <form method="post">
+
+                        <h1 class="govuk-heading-xl">${1:Page title}</h1>
+
+                        $2
+
+                        {{ govukButton({
+                            html: 'Continue'
+                        }) }}
+
+                    </form>
+
+                </div>
+
+        </div>
+
+        {% endblock %}
+      """
