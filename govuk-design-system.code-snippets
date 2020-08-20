@@ -504,6 +504,22 @@
 		"description": "Tag - GOV.UK Design System"
 	},
 
+	"Details": {
+		"prefix": "gov-details",
+		"scope": "html,nunjucks,html-nunjucks",
+		"body": [
+			"{% set detailsContentHTML %}",
+			"\t$1",
+			"{% endset %}",
+			"",
+			"{{ govukDetails({",
+			"\tsummaryText: '$2',",
+			"\thtml: detailsContentHTML",
+			"}) }}"
+		],
+		"description": "Details - GOV.UK Design System"
+	},
+
 	"Form page": {
 		"prefix": "prototype-form-page",
 		"scope": "html,nunjucks,html-nunjucks",
