@@ -315,7 +315,6 @@
 		"scope": "html,nunjucks,html-nunjucks",
 		"body": [
 			"{{ govukRadios ({",
-			"\tclasses: 'govuk-radios--inline',",
 			"\tidPrefix: '$1',",
 			"\tname: '$1',",
 			"\tfieldset: {",
@@ -328,11 +327,13 @@
 			"\titems: [",
 			"\t\t{",
 			"\t\t\ttext: 'Yes',",
-			"\t\t\tvalue: 'yes'",
+			"\t\t\tvalue: 'Yes',",
+			"\t\t\tchecked: true if data['$1'] == 'Yes'",
 			"\t\t},",
 			"\t\t{",
 			"\t\t\ttext: 'No',",
-			"\t\t\tvalue: 'no'",
+			"\t\t\tvalue: 'No',",
+			"\t\t\tchecked: true if data['$1'] == 'No'",
 			"\t\t}",
 			"\t]",
 			"}) }}"
@@ -368,7 +369,13 @@
 	"Radio or checkbox option": {
 		"prefix": "gov-form-option",
 		"scope": "html,nunjucks,html-nunjucks",
-		"body": ["{", "\ttext: '$1',", "\tvalue: '$2'", "}"],
+		"body": [
+			"{",
+			"\ttext: '$1',",
+			"\tvalue: '$1',",
+			"\tchecked: true if data['$2'] == '$1',",
+			"}"
+		],
 		"description": "Radio or checkbox option - GOV.UK Design System"
 	},
 
