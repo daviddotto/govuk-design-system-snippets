@@ -373,7 +373,7 @@
 			"{",
 			"\ttext: '$1',",
 			"\tvalue: '$1',",
-			"\tchecked: true if data['$2'] == '$1',",
+			"\tchecked: true if data['$2'] == '$1'",
 			"}"
 		],
 		"description": "Radio or checkbox option - GOV.UK Design System"
