@@ -3,7 +3,7 @@ v2
 
 GOV.UK Design System Nunjucks macro snippets for popular code editors. For use by UK government designers. 
 
-![An animation of the code snippets in action](https://github.com/daviddotto/govuk-design-system-snippets/blob/master/demo.gif "Snippets in action")
+![An animation of the code snippets in action](https://github.com/daviddotto/govuk-design-system-snippets/blob/main/demo.gif "Snippets in action")
 
 ## Installation
 
