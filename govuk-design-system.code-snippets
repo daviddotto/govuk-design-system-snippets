@@ -548,7 +548,7 @@
 		"prefix": "prototype-form-page",
 		"scope": "html,nunjucks,html-nunjucks",
 		"body": [
-			"{% extends 'layout.html' %}",
+			"{% extends 'layouts/main.html' %}",
 			"",
 			"{% block pageTitle %}",
 			"\t${1:Page title}",
